@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, StaticQuery } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
   const pages = data.allMarkdownRemark.edges;
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Галерея работ" />
       <div className="image-grid">
         {pages.map(({ node }) => (
           <div className="image-cell" key={node.fields.slug}>
