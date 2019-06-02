@@ -38,7 +38,7 @@ const indexQuery = graphql`
           frontmatter {
             thumbnail {
               childImageSharp {
-                resize(width: 250, height: 250) {
+                resize(width: 350, height: 350) {
                   src
                 }
               }

@@ -3,7 +3,7 @@ thumbnail: ./image.jpg
 type: about
 ---
 
-# Алейников Александр Абрамович
+## Алейников Александр Абрамович
 
 ![Image](./image.jpg)
     

@@ -660,7 +660,7 @@ pre tt:after {
 
 nav {
   display: flex;
-  height: 70px;
+  flex-wrap: wrap;
 }
 
 .nav {
@@ -692,6 +692,16 @@ nav {
   margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .site-title {
+    width: 100%;
+  }
+  .site-title h1 {
+    font-size: 1.6em;
+    margin-top: -30px;
+  }
+}
+
 .image-grid {
   display: flex;
   flex-wrap: wrap;
@@ -707,6 +717,11 @@ nav {
 
 .image-cell {
   width: 100%;
+}
+@media screen and (max-width: 499px) {
+  .image-cell img {
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 500px) {
   .image-cell {
