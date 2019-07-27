@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -13,9 +14,7 @@ const IndexPage = ({ data }) => {
         {pages.map(({ node }) => (
           <div className="image-cell" key={node.fields.slug}>
             <Link to={node.fields.slug}>
-              <img
-                src={node.frontmatter.thumbnail.childImageSharp.resize.src}
-              />
+              <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
             </Link>
           </div>
         ))}
@@ -38,8 +37,8 @@ const indexQuery = graphql`
           frontmatter {
             thumbnail {
               childImageSharp {
-                resize(width: 350, height: 350) {
-                  src
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
